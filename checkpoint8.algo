@@ -12,16 +12,15 @@ BEGIN
     //Determine the characters:
     num_of_characters:=sentence.length;
     //looping to determine the num_of_vowels and the num_of_words:
+    sentence:= ToUpper(sentence);
     FOR i FROM 0 TO sentence.length-1 STEP step  DO
     //Reading sentence character by character and to determine the num_of_vowels:
-    IF (sentence[i]= "a" OR sentence[i]= "e" OR sentence[i]= "i" OR sentence[i]= "u" OR sentence[i]= "o" OR sentence[i]= "y"
-    OR
-    sentence[i]= "A" OR sentence[i]= "E" OR sentence[i]= "I" OR sentence[i]= "U" OR sentence[i]= "O" OR sentence[i]= "Y") 
+    IF ( sentence[i]= "A" OR sentence[i]= "E" OR sentence[i]= "I" OR sentence[i]= "U" OR sentence[i]= "O" OR sentence[i]= "Y") 
     THEN
     num_of_vowels:= num_of_vowels+1;
     END_IF
     //Reading sentence character by character and to determine the num_of_words:
-    IF (sentence[i]= "") 
+    IF (sentence[i]= " ") 
     THEN 
     num_of_words:= num_of_words+1;
     END_IF
