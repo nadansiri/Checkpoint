@@ -1,6 +1,6 @@
 ALGORITHM sentence_counters
 VAR
-    num_of_words,num_of_vowels,num_of_characters : INTEGER :=0;
+    i,num_of_words,num_of_vowels,num_of_characters : INTEGER :=0;
     sentence := STRING;
 BEGIN
     //Reading the input
@@ -8,11 +8,11 @@ BEGIN
     REPEAT
         Write("write a sentence");
         Read(sentence);
-    UNTIL (sentence[lenght(sentence)-1]=".")
+    UNTIL (sentence[sentence.length-1]=".")
     //Determine the characters:
-    num_of_characters:=lenght(sentence);
+    num_of_characters:=sentence.length;
     //looping to determine the num_of_vowels and the num_of_words:
-    FOR i FROM 0 TO lenght(sentence) STEP step  DO
+    FOR i FROM 0 TO sentence.length-1 STEP step  DO
     //Reading sentence character by character and to determine the num_of_vowels:
     IF (sentence[i]= "a" OR sentence[i]= "e" OR sentence[i]= "i" OR sentence[i]= "u" OR sentence[i]= "o" OR sentence[i]= "y"
     OR
